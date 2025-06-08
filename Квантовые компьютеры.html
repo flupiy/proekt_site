@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Квантовые компьютеры</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        body {
+            background-color: #f8f9ff;
+            color: #2b2d42;
+            line-height: 1.6;
+        }
+
+        /* Шапка */
+        header {
+            background: linear-gradient(rgba(248, 249, 255, 0.9), rgba(248, 249, 255, 0.9)),
+                        url('https://images.unsplash.com/photo-1620712943543-bcc4688e7485');
+            background-size: cover;
+            text-align: center;
+            padding: 120px 20px;
+            border-bottom: 3px solid #6c63ff;
+        }
+
+        header h1 {
+            font-size: 3.5em;
+            margin-bottom: 15px;
+            color: #6c63ff;
+            text-shadow: 2px 2px 4px rgba(108, 99, 255, 0.1);
+        }
+
+        /* Основной контент */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* Секции */
+        section {
+            background: white;
+            padding: 30px;
+            margin: 30px 0;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(108, 99, 255, 0.08);
+            transform: translateY(20px);
+            opacity: 0;
+            transition: all 0.6s ease-out;
+        }
+
+        section.visible {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        h2 {
+            color: #6c63ff;
+            margin-bottom: 25px;
+            font-size: 2em;
+            position: relative;
+            padding-left: 20px;
+        }
+
+        h2:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 8px;
+            height: 80%;
+            background: #6c63ff;
+            border-radius: 4px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 15px 0;
+        }
+
+        ul li {
+            margin: 20px 0;
+            padding: 20px;
+            background: #f8f9ff;
+            border-radius: 10px;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        ul li:hover {
+            transform: translateX(15px);
+            box-shadow: 4px 4px 12px rgba(108, 99, 255, 0.1);
+        }
+
+        .icon {
+            width: 30px;
+            height: 30px;
+            filter: invert(40%) sepia(93%) saturate(433%) hue-rotate(207deg);
+        }
+
+        /* Подвал */
+        footer {
+            background: #6c63ff;
+            color: white;
+            text-align: center;
+            padding: 30px;
+            margin-top: 60px;
+        }
+
+        /* Адаптивность */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.2em;
+            }
+
+            section {
+                padding: 20px;
+            }
+
+            ul li {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+
+        /* Кнопка "Наверх" */
+        #scrollTopBtn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #6c63ff;
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: none;
+            border: none;
+            box-shadow: 0 4px 15px rgba(108, 99, 255, 0.4);
+            transition: all 0.3s;
+        }
+    </style>
+</head>
+<body>
+    <!-- Шапка -->
+    <header>
+        <h1>Квантовые компьютеры</h1>
+        <p>Следующая революция в вычислительных технологиях</p>
+    </header>
+
+    <!-- Основной контент -->
+    <div class="container">
+        <!-- Что такое -->
+        <section>
+            <h2>Что такое квантовый компьютер?</h2>
+            <p>Устройство, использующее квантово-механические явления (суперпозицию и запутанность) для выполнения операций с данными. В отличие от классических битов, квантовые биты (кубиты) могут находиться в нескольких состояниях одновременно.</p>
+        </section>
+
+        <!-- Принципы работы -->
+        <section>
+            <h2>Основные принципы</h2>
+            <ul>
+                <li>
+                    <img src="https://www.svgrepo.com/show/374093/superposition.svg" class="icon" alt="superposition">
+                    Суперпозиция: кубит может быть 0 и 1 одновременно
+                </li>
+                <li>
+                    <img src="https://www.svgrepo.com/show/374090/entanglement.svg" class="icon" alt="entanglement">
+                    Запутанность: связь между кубитами
+                </li>
+                <li>
+                    <img src="https://www.svgrepo.com/show/374092/interference.svg" class="icon" alt="interference">
+                    Квантовая интерференция
+                </li>
+            </ul>
+        </section>
+
+        <!-- Применение -->
+        <section>
+            <h2>Области применения</h2>
+            <ul>
+                <li>Квантовая химия и разработка материалов</li>
+                <li>Криптография и кибербезопасность</li>
+                <li>Искусственный интеллект и машинное обучение</li>
+                <li>Финансовое моделирование</li>
+                <li>Логистика и оптимизация</li>
+            </ul>
+        </section>
+
+        <!-- Технологии -->
+        <section>
+            <h2>Современные разработки</h2>
+            <ul>
+                <li>IBM Quantum Experience</li>
+                <li>Google Sycamore (квантовое превосходство)</li>
+                <li>Квантовые компьютеры на ионах</li>
+                <li>Топологические кубиты Microsoft</li>
+            </ul>
+        </section>
+    </div>
+
+<nav>
+        <div class="container">
+            <ul class="nav-links">
+                <li><a href ="index.html"><h3>Главная</h3></a></li>
+            </ul>
+        </div>
+    </nav>
+	
+    <!-- Подвал -->
+    <footer>
+        <p>© 2023 Квантовые вычисления. Все права защищены | Сделано с ♥ для науки</p>
+    </footer>
+
+    <!-- Кнопка "Наверх" -->
+    <button id="scrollTopBtn">↑</button>
+
+    <script>
+        // Анимация появления секций
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('section').forEach(section => {
+            observer.observe(section);
+        });
+
+        // Кнопка "Наверх"
+        const scrollBtn = document.getElementById('scrollTopBtn');
+        
+        window.addEventListener('scroll', () => {
+            scrollBtn.style.display = window.scrollY > 500 ? 'block' : 'none';
+        });
+
+        scrollBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Параллакс-эффект для шапки
+        window.addEventListener('scroll', () => {
+            const scrolled = window.scrollY * 0.5;
+            document.querySelector('header').style.backgroundPositionY = `${scrolled}px`;
+        });
+    </script>
+</body>
+</html>

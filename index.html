@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Технологии будущего | Как технологии меняют мир</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Основные стили */
+        :root {
+            --primary: #00a8ff;
+            --secondary: #0097e6;
+            --dark: #1e272e;
+            --light: #f5f6fa;
+            --success: #4cd137;
+            --warning: #e84118;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--light);
+            color: var(--dark);
+            line-height: 1.6;
+        }
+
+        /* Шапка сайта */
+        header {
+            background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), 
+                        url('https://images.unsplash.com/photo-1677442135136-760c813a743d') center/cover;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            padding: 0 20px;
+        }
+
+        header h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            animation: fadeIn 2s;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+
+        .btn:hover {
+            background: var(--secondary);
+            transform: translateY(-3px);
+        }
+
+        /* Навигация */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(30, 39, 46, 0.9);
+            padding: 15px 0;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+        }
+
+        nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .logo {
+            color: white;
+            font-size: 1.8rem;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-links li {
+            margin-left: 30px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        /* Основной контент */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 80px 20px;
+        }
+
+        section {
+            margin-bottom: 80px;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            text-align: center;
+            color: var(--dark);
+        }
+
+        h3 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: var(--primary);
+        }
+
+        /* Карточки технологий */
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .tech-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .tech-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .tech-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .tech-content {
+            padding: 20px;
+        }
+
+        .tech-content p {
+            margin-bottom: 15px;
+        }
+
+        .tag {
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            margin-bottom: 10px;
+        }
+
+        /* Раздел "Влияние на общество" */
+        .impact {
+            background: var(--dark);
+            color: white;
+            padding: 60px 0;
+        }
+
+        .impact h2 {
+            color: white;
+        }
+
+        .impact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .impact-item {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 25px;
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+
+        .impact-item:hover {
+            transform: scale(1.05);
+        }
+
+        .impact-item i {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+
+        /* Подвал */
+        footer {
+            background: var(--dark);
+            color: white;
+            text-align: center;
+            padding: 40px 0;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            margin-bottom: 20px;
+        }
+
+        .footer-links li {
+            margin: 0 15px;
+        }
+
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .footer-links a:hover {
+            color: var(--primary);
+        }
+
+        .social-icons {
+            margin-bottom: 20px;
+        }
+
+        .social-icons a {
+            color: white;
+            font-size: 1.5rem;
+            margin: 0 10px;
+            transition: color 0.3s;
+        }
+
+        .social-icons a:hover {
+            color: var(--primary);
+        }
+
+        /* Анимации */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Адаптивность */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.5rem;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .tech-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Навигация -->
+    <nav>
+        <div class="container">
+            <div class="logo">TechFuture</div>
+            <ul class="nav-links">
+                <li><a href="#home">Главная</a></li>
+                <li><a href="#tech">Технологии</a></li>
+                <li><a href="#impact">Влияние</a></li>
+                <li><a href="#future">Будущее</a></li>
+                <li><a href="#ethics">Этика</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Герой-секция -->
+    <header id="home">
+        <h1>Технологии, которые меняют наш мир</h1>
+        <p>От искусственного интеллекта до квантовых компьютеров — узнайте, как инновации трансформируют нашу жизнь уже сегодня.</p>
+        <a href="#tech" class="btn">Исследовать</a>
+    </header>
+
+    <!-- Основной контент -->
+    <main class="container">
+        <!-- Раздел "Ключевые технологии" -->
+        <section id="tech">
+            <h2>Ключевые технологии</h2>
+            <div class="tech-grid">
+                <!-- Карточка 1: ИИ -->
+                <div class="tech-card">
+                    <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995" alt="Искусственный интеллект">
+                    <div class="tech-content">
+                        <span class="tag">AI</span>
+                        <a href ="Искусственный интеллект.html"><h3>Искусственный интеллект</h3></a>
+                        <p>Машинное обучение и нейросети революционизируют медицину, финансы, транспорт и творчество. ChatGPT, Midjourney и автономные системы — лишь начало.</p>
+                        <p><strong>Пример:</strong> Диагностика заболеваний с точностью 95%.</p>
+                    </div>
+                </div>
+
+                <!-- Карточка 2: Блокчейн -->
+                <div class="tech-card">
+                    <img src="https://images.unsplash.com/photo-1639762681057-408e52192e55" alt="Блокчейн">
+                    <div class="tech-content">
+                        <span class="tag">Blockchain</span>
+                        <a href ="Блокчейн и Web3.html"><h3>Блокчейн и Web3</h3></a>
+                        <p>Децентрализованные технологии меняют финансы, цифровую идентификацию и управление данными. NFT, DeFi и смарт-контракты — новые стандарты.</p>
+                        <p><strong>Пример:</strong> Банковские транзакции за секунды без посредников.</p>
+                    </div>
+                </div>
+
+                <!-- Карточка 3: Квантовые вычисления -->
+                <div class="tech-card">
+                    <img src="https://s.yimg.com/uu/api/res/1.2/1Cf2PGDy5rRb.GqAvMl2Cw--~B/aD0xMjAwO3c9MTgwMDthcHBpZD15dGFjaHlvbg--/https://o.aolcdn.com/hss/storage/midas/9ae43aa437c0e38435934ef532bf4dc5/206011415/quantumfull.jpg" alt="Квантовые компьютеры">
+                    <div class="tech-content">
+                        <span class="tag">Quantum</span>
+                       <a href ="Квантовые компьютеры.html"><h3>Квантовые компьютеры</h3></a>
+                        <p>Решают задачи, невозможные для классических компьютеров: моделирование молекул, криптография, оптимизация логистики.</p>
+                        <p><strong>Пример:</strong> Google достигла "квантового превосходства" в 2019.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Раздел "Влияние на общество" -->
+        <section class="impact" id="impact">
+            <h2>Как технологии меняют нашу жизнь?</h2>
+            <div class="impact-grid">
+                <div class="impact-item">
+                    <i class="fas fa-briefcase-medical"></i>
+                    <h3>Медицина</h3>
+                    <p>ИИ диагностирует рак, CRISPR редактирует гены, а телемедицина делает помощь доступной.</p>
+                </div>
+
+                <div class="impact-item">
+                    <i class="fas fa-graduation-cap"></i>
+                    <h3>Образование</h3>
+                    <p>VR-обучение, персонализированные курсы на основе AI и глобальные онлайн-университеты.</p>
+                </div>
+
+                <div class="impact-item">
+                    <i class="fas fa-city"></i>
+                    <h3>Города</h3>
+                    <p>Умные светофоры, автономный транспорт и IoT-инфраструктура сокращают пробки на 30%.</p>
+                </div>
+
+                <div class="impact-item">
+                    <i class="fas fa-robot"></i>
+                    <h3>Работа</h3>
+                    <p>65% профессий изменятся к 2030 году. Роботы заменят рутину, но создадут новые возможности.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Раздел "Будущие тренды" -->
+        <section id="future">
+            <h2>Что нас ждет в будущем?</h2>
+            <div class="tech-grid">
+                <div class="tech-card">
+                    <img src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb" alt="Метавселенная">
+                    <div class="tech-content">
+					<a href ="Метавселенные.html"><h3>Метавселенные</h3></a>
+                        <p>Полноценные цифровые миры для работы, общения и развлечений. Meta, Apple и NVIDIA инвестируют миллиарды.</p>
+                    </div>
+                </div>
+
+                <div class="tech-card">
+                    <img src="https://images.unsplash.com/photo-1639762681057-408e52192e55" alt="Нейроинтерфейсы">
+                    <div class="tech-content">
+					<a href ="Нейроинтерфейсы.html"><h3>Нейроинтерфейсы</h3></a>
+                        <p>Neuralink Илона Маска обещает прямой контакт мозга с компьютером к 2030 году.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Раздел "Этические вопросы" -->
+        <section id="ethics">
+            <h2>Этические вызовы</h2>
+            <div class="tech-card">
+                <div class="tech-content">
+                    <h3>Риски и регулирование</h3>
+                    <p>🔹 <strong>Конфиденциальность:</strong> Кто владеет нашими данными в эпоху AI?</p>
+                    <p>🔹 <strong>Безработица:</strong> Как подготовиться к автоматизации 40% профессий?</p>
+                    <p>🔹 <strong>Безопасность:</strong> Кибератаки с использованием ИИ становятся умнее.</p>
+                    <p>🔹 <strong>ИИ-предвзятость:</strong> Алгоритмы могут усиливать дискриминацию.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Подвал -->
+    <footer>
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+        <ul class="footer-links">
+            <li><a href="#">Контакты</a></li>
+            <li><a href="#">О нас</a></li>
+            <li><a href="#">Политика конфиденциальности</a></li>
+        </ul>
+        <p>&copy; 2023 TechFuture. Все права защищены.</p>
+    </footer>
+</body>
+</html>

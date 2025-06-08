@@ -1,0 +1,265 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Блокчейн и Web3</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-color: #ffffff; /* Изменено на белый */
+            color: #2d3748; /* Темно-серый текст */
+            line-height: 1.6;
+        }
+
+        /* Шапка */
+        header {
+            background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)),
+                        url('https://images.unsplash.com/photo-1621414931135-0c2a8705d161');
+            background-size: cover;
+            text-align: center;
+            padding: 120px 20px;
+            border-bottom: 3px solid #3b82f6;
+            color: #1e293b; /* Темный текст в шапке */
+        }
+
+        header h1 {
+            font-size: 3em;
+            margin-bottom: 15px;
+            color: #2563eb; /* Более насыщенный синий */
+        }
+
+        /* Основной контент */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* Секции */
+        section {
+            background: #f8fafc; /* Светло-серый фон */
+            padding: 30px;
+            margin: 30px 0;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0; /* Светлая граница */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05); /* Более мягкая тень */
+        }
+
+        h2 {
+            color: #2563eb; /* Насыщенный синий */
+            margin-bottom: 25px;
+            font-size: 1.8em;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        ul li {
+            margin: 15px 0;
+            padding: 15px;
+            background: #f1f5f9; /* Светлый фон элементов */
+            border-radius: 8px;
+            transition: all 0.2s;
+            color: #475569; /* Серо-синий текст */
+        }
+
+        ul li:hover {
+            transform: translateX(10px);
+            background: #e2e8f0; /* Серый при наведении */
+        }
+
+        /* Подсветка терминов */
+        .highlight {
+            color: #2563eb;
+            font-weight: bold;
+        }
+
+        /* Подвал */
+        footer {
+            background: #f8fafc; /* Светлый фон */
+            color: #475569; /* Темный текст */
+            text-align: center;
+            padding: 25px;
+            margin-top: 50px;
+            border-top: 2px solid #e2e8f0; /* Светлая граница */
+        }
+
+        /* Кнопка "Наверх" */
+        #scrollTopBtn {
+            background: #3b82f6;
+            color: white;
+			
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-color: #0f172a;
+            color: #e2e8f0;
+            line-height: 1.6;
+        }
+
+        /* Шапка */
+        header {
+            background: linear-gradient(rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.9)),
+                        url('https://images.unsplash.com/photo-1621414931135-0c2a8705d161');
+            background-size: cover;
+            text-align: center;
+            padding: 120px 20px;
+            border-bottom: 3px solid #3b82f6;
+        }
+
+        header h1 {
+            font-size: 3em;
+            margin-bottom: 15px;
+            color: #60a5fa;
+        }
+
+        /* Основной контент */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* Секции */
+        section {
+            background: #1e293b;
+            padding: 30px;
+            margin: 30px 0;
+            border-radius: 12px;
+            border: 1px solid #334155;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        h2 {
+            color: #3b82f6;
+            margin-bottom: 25px;
+            font-size: 1.8em;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        ul li {
+            margin: 15px 0;
+            padding: 15px;
+            background: #334155;
+            border-radius: 8px;
+            transition: transform 0.2s;
+        }
+
+        ul li:hover {
+            transform: translateX(10px);
+        }
+
+        /* Подсветка терминов */
+        .highlight {
+            color: #60a5fa;
+            font-weight: bold;
+        }
+
+        /* Подвал */
+        footer {
+            background: #1e293b;
+            text-align: center;
+            padding: 25px;
+            margin-top: 50px;
+            border-top: 2px solid #3b82f6;
+        }
+
+        /* Адаптивность */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2em;
+            }
+
+            .container {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Шапка -->
+    <header>
+        <h1>Блокчейн и Web3</h1>
+        <p>Децентрализованное будущее интернета</p>
+    </header>
+
+    <!-- Основной контент -->
+    <div class="container">
+        <!-- Что такое блокчейн? -->
+        <section>
+            <h2>Что такое блокчейн?</h2>
+            <p><span class="highlight">Блокчейн</span> — это децентрализованная цифровая книга (ledger), которая хранит данные в цепочке блоков. Каждый блок содержит информацию о транзакциях, защищенную криптографией.</p>
+        </section>
+
+        <!-- Web3 -->
+        <section>
+            <h2>Что такое Web3?</h2>
+            <p><span class="highlight">Web3</span> — новое поколение интернета, основанное на блокчейне. Это мир децентрализованных приложений (DApps), смарт-контрактов и цифрового суверенитета.</p>
+        </section>
+
+        <!-- Технологии -->
+        <section>
+            <h2>Ключевые технологии</h2>
+            <ul>
+                <li>Смарт-контракты (Ethereum, Solana)</li>
+                <li>Децентрализованные финансы (DeFi)</li>
+                <li>NFT и цифровое искусство</li>
+                <li>DAO — децентрализованные организации</li>
+                <li>Межсетевые протоколы (Polkadot, Cosmos)</li>
+            </ul>
+        </section>
+
+        <!-- Преимущества -->
+        <section>
+            <h2>Преимущества</h2>
+            <ul>
+                <li>🔒 Безопасность: данные нельзя изменить</li>
+                <li>🌐 Прозрачность: все транзакции открыты</li>
+                <li>💸 Отсутствие посредников</li>
+                <li>🚀 Глобальная доступность</li>
+            </ul>
+        </section>
+
+        <!-- Проблемы -->
+        <section>
+            <h2>Вызовы</h2>
+            <ul>
+                <li>Высокое энергопотребление (Proof of Work)</li>
+                <li>Сложность масштабирования</li>
+                <li>Регуляторные ограничения</li>
+                <li>Риски мошенничества</li>
+            </ul>
+        </section>
+    </div>
+
+<nav>
+        <div class="container">
+            <ul class="nav-links">
+                <li><a href ="index.html"><h3>Главная</h3></a></li>
+            </ul>
+        </div>
+    </nav>
+	
+    <!-- Подвал -->
+    <footer>
+        <p>© 2023 Блокчейн и Web3. Сделано с ❤️ для децентрализации</p>
+    </footer>
+</body>
+</html>
